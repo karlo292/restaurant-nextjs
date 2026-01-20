@@ -48,7 +48,7 @@ export default function Navbar() {
                         return <Link className={"text-[16px] font-bold font-primary"} key={link.href} href={link.href}>{link.name}</Link>
                     })}
                 </div>
-                <Link href={"/reservations"} className={"bg-primary py-4 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter"}>
+                <Link href={"/reservations"} className={"bg-primary py-3 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter"}>
                     Book a table
                 </Link>
             </nav>
@@ -67,7 +67,7 @@ export default function Navbar() {
                         return <Link className={"text-[16px] font-bold font-primary"} key={link.href} href={link.href}>{link.name}</Link>
                     })}
                 </div>
-                <Link href={"/reservations"} className={`bg-primary text-center py-4 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter ${!isMobileMenuOpen ? "hidden" : ""}`}>
+                <Link href={"/reservations"} className={`bg-primary text-center py-3 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter ${!isMobileMenuOpen ? "hidden" : ""}`}>
                     Book a table
                 </Link>
             </nav>
