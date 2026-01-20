@@ -4,7 +4,7 @@ import {FaStar} from "react-icons/fa6";
 export default function HomeReviews() {
     return (
         <section className={"w-full"}>
-            <div className={"max-w-360 w-full  mx-auto px-10 py-20 rounded-md bg-secondary min-h-175 flex flex-col items-center text-center"}>
+            <div className={"max-w-360 w-full  mx-auto px-10 py-20 rounded-md justify-center bg-secondary min-h-165 flex flex-col items-center text-center"}>
                 <h2 className={"text-black font-semibold font-primary text-4xl md:text-5xl mb-5"}>What Our Guests Say</h2>
                 <p className={"max-w-140.75 text-sm sm:text-[15px] text-muted-foreground mb-4"}>Don&#39;t just take our word for it. Here is what our valued guests have to say about their dining experience.</p>
                 <div>
