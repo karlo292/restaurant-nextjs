@@ -56,18 +56,18 @@ export default function Navbar() {
                 <div className={"flex flex-row justify-between items-center"}>
                     <Logo />
                     <div className={"p-3 rounded-md border-border border"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        <FaBars className={`${!isMobileMenuOpen && "hidden"} w-5 h-5`} />
-                        <FaXmark className={`${isMobileMenuOpen && "hidden"} w-5 h-5`} />
+                        <FaBars className={`${isMobileMenuOpen && "hidden"} w-5 h-5`} />
+                        <FaXmark className={`${!isMobileMenuOpen && "hidden"} w-5 h-5`} />
                     </div>
                 </div>
-                <div className={`border-b border-border w-full ${isMobileMenuOpen ? "hidden" : ""}`} />
+                <div className={`border-b border-border w-full ${!isMobileMenuOpen ? "hidden" : ""}`} />
 
-                <div className={`${isMobileMenuOpen ? "hidden" : ""} gap-4 flex flex-col`}>
+                <div className={`${!isMobileMenuOpen ? "hidden" : ""} gap-4 flex flex-col`}>
                     {links.map((link: Link) => {
                         return <Link className={"text-[16px] font-bold font-primary"} key={link.href} href={link.href}>{link.name}</Link>
                     })}
                 </div>
-                <Link href={"/reservations"} className={`bg-primary text-center py-4 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter ${isMobileMenuOpen ? "hidden" : ""}`}>
+                <Link href={"/reservations"} className={`bg-primary text-center py-4 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter ${!isMobileMenuOpen ? "hidden" : ""}`}>
                     Book a table
                 </Link>
             </nav>
