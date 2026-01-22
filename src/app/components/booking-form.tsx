@@ -2,6 +2,7 @@ import Link from "next/dist/client/link";
 import {FaMapMarkerAlt} from "react-icons/fa";
 import {FaPhone, FaRegClock} from "react-icons/fa6";
 import {IoMdMail} from "react-icons/io";
+import type {IconType} from "react-icons";
 
 export default function BookingForm() {
     return (
@@ -61,8 +62,8 @@ export default function BookingForm() {
     )
 }
 
-//@typescript-eslint/no-explicit-any
-function ContactDetail({ icon: Icon, title, detail }: { icon: React.ComponentType<any>; title: string; detail: string; }) {
+
+function ContactDetail({ icon: Icon, title, detail }: { icon: IconType; title: string; detail: string; }) {
     return (
         <div className={"flex flex-row gap-3"}>
             <Icon className={"w-5 h-5 mt-1 text-primary"} />

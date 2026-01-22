@@ -35,17 +35,17 @@ const links : Link[] = [
 
 
 
-export default function Navbar() {
+export default function Navbar({noBackground}: {noBackground?: boolean}) {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className='w-full border-b border-border'>
-            <nav className="hidden md:flex w-full max-w-480 mx-auto px-4 h-20 bg-background flex-row justify-between items-center">
-                <Logo />
+        <div className='w-full border-b border-border bg-white/10 sm:bg-transparent'>
+            <nav className={`hidden md:flex w-full max-w-300 mx-auto px-4 h-20 flex-row justify-between items-center ${noBackground ? "bg-transparent" : "bg-background"}`}>
+                <Logo noBackground={noBackground} />
                 <div className={"gap-4 flex flex-row"}>
                     {links.map((link: Link) => {
-                        return <Link className={"text-[16px] font-bold font-primary"} key={link.href} href={link.href}>{link.name}</Link>
+                        return <Link className={`text-[16px] font-semibold font-primary ${noBackground && "text-white"}`} key={link.href} href={link.href}>{link.name}</Link>
                     })}
                 </div>
                 <Link href={"/reservations"} className={"bg-primary py-3 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter"}>
@@ -54,17 +54,17 @@ export default function Navbar() {
             </nav>
             <nav className={"flex flex-col gap-4 md:hidden py-4 px-8"}>
                 <div className={"flex flex-row justify-between items-center"}>
-                    <Logo />
-                    <div className={"p-3 rounded-md border-border border"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        <FaBars className={`${isMobileMenuOpen && "hidden"} w-5 h-5`} />
-                        <FaXmark className={`${!isMobileMenuOpen && "hidden"} w-5 h-5`} />
+                    <Logo noBackground={noBackground} />
+                    <div className={`p-3 rounded-md  border ${noBackground && "border-white/20"}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                        <FaBars className={`${isMobileMenuOpen && "hidden"} ${noBackground && "text-white"} w-5 h-5`} />
+                        <FaXmark className={`${!isMobileMenuOpen && "hidden"} ${noBackground && "text-white"} w-5 h-5`} />
                     </div>
                 </div>
                 <div className={`border-b border-border w-full ${!isMobileMenuOpen ? "hidden" : ""}`} />
 
                 <div className={`${!isMobileMenuOpen ? "hidden" : ""} gap-4 flex flex-col`}>
                     {links.map((link: Link) => {
-                        return <Link className={"text-[16px] font-bold font-primary"} key={link.href} href={link.href}>{link.name}</Link>
+                        return <Link className={`text-[16px] font-bold font-primary ${noBackground && "text-white"}`} key={link.href} href={link.href}>{link.name}</Link>
                     })}
                 </div>
                 <Link href={"/reservations"} className={`bg-primary text-center py-3 px-4 rounded-md text-[16px] hover:cursor-pointer text-white font-inter ${!isMobileMenuOpen ? "hidden" : ""}`}>
@@ -75,11 +75,11 @@ export default function Navbar() {
     )
 }
 
-function Logo() {
+function Logo({noBackground}: {noBackground?: boolean}) {
     return (
         <div className={"flex flex-row gap-2 items-center "}>
             <Image alt={"Navbar Icon"} width={"32"} height={"32"} src={"/icon.png"} />
-            <h1 className="font-bold text-2xl">Savoria</h1>
+            <h1 className={`font-bold text-2xl ${noBackground && "text-white"}`}>Savoria</h1>
         </div>
     )
 }
