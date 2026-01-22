@@ -4,7 +4,7 @@ import Link from "next/dist/client/link";
 export default function Footer() {
     return (
         <footer>
-            <div className={"max-w-300 w-full mx-auto px-4 py-6 md:px-0"}>
+            <div className={"max-w-300 w-full mx-auto px-4 py-6 xl:px-0"}>
                 <div className={"flex flex-col gap-4 sm:flex-row justify-between"}>
                     <div>
                         <div className={"flex flex-row gap-2 items-center "}>
@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={"flex flex-col sm:flex-row max-w-295 items-center mt-4 justify-between"}>
-                    <p className={"text-center text-black text-[13px] mt-6"}>© 2024 Savoria. All rights reserved.</p>
+                    <p className={"text-center text-black text-[13px] mt-6"}>© 2026 Savoria. All rights reserved.</p>
                     <div className={"flex gap-3"}>
                         <Link className={"text-black"} href={"https://example.com"}>Privacy Policy</Link>
                         <Link className={"text-black"} href={"https://example.com"}>Terms of Service</Link>
