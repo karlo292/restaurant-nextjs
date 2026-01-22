@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interFont.variable} antialiased overflow-y-hidden`}
+        className={`${interFont.variable} antialiased`}
       >
         <ReactLenis root />
         {children}
