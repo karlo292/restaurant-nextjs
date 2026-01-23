@@ -7,7 +7,7 @@ export default function ReservationsForm() {
         <section className={"w-full py-16 px-4"}>
             <div className={"max-w-300 mx-auto"}>
                 <div className={"text-center mb-18"}>
-                    <h1 className={"font-bold text-4xl mb-4"}>Make a Reservation</h1>
+                    <h1 className={"font-bold text-5xl mb-4"}>Make a Reservation</h1>
                     <p className={"text-[15px] text-muted-foreground"}>Join us for an unforgettable dining experience. Reserve your table below for lunch or dinner service.</p>
                 </div>
                 <div className={"flex flex-row flex-wrap justify-between items-start"}>
