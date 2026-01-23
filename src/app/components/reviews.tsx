@@ -1,5 +1,6 @@
 import {FaStar} from "react-icons/fa6";
 import Review from "@/app/components/review";
+import Link from "next/link";
 
 export function Reviews() {
     return (
@@ -73,7 +74,11 @@ export function Reviews() {
                         role={"Business Professional"}
                         imageUrl={"/reviews/reviewUser6.png"}
                     />
-
+                </div>
+                <div className={"w-full flex justify-center mb-24"}>
+                    <Link href={"#"} className={"bg-none mt-5 text-black mx-auto px-6 py-3 border border-border text-sm rounded-md font-bold"}>
+                        View All Reviews
+                    </Link>
                 </div>
             </div>
         </section>

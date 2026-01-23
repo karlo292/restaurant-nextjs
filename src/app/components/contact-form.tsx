@@ -2,12 +2,12 @@ import {Image} from "next/dist/client/image-component";
 
 export default function ContactForm() {
     return (
-        <section className={"w-full pt-12 sm:p-4"}>
-            <div className={"flex flex-col items-start justify-center mx-auto max-w-300 gap-4 mt-16"}>
+        <section className={"w-full pt-12 p-4 sm:p-0"}>
+            <div className={"flex flex-col  items-start justify-center mx-auto max-w-300 gap-4 mt-16"}>
                 <h1 className={"text-5xl font-bold  text-black"}>Contact Us</h1>
                 <p className={"text-lg text-muted-foreground"}>Have a question or planning a special event? We&#39;d love to hear from you.</p>
                 <div className={"flex flex-col lg:flex-row justify-between w-full"}>
-                    <form className={"w-full flex flex-col lg:max-w-138 p-6"}>
+                    <form className={"w-full flex flex-col lg:max-w-138 "}>
                         <h2 className={"font-bold text-2xl"}>Send a message</h2>
                         <div className={"mt-4 flex w-full flex-wrap flex-col sm:flex-nowrap sm:flex-row gap-4"}>
                             <div className={"flex flex-col w-full gap-1"}>
