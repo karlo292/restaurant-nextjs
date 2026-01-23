@@ -71,6 +71,7 @@ export default function ReservationsForm() {
                         <div className={"bg-secondary w-full px-6 py-8 mt-8 rounded-sm"}>
                             <h2 className={"font-bold text-lg mb-5"}>Opening Hours</h2>
                             <div className={"flex flex-row gap-4 mb-6 items-start"}>
+                                <Image src={"/svgs/sun-muted.svg"} alt={"Lunch icon"} width={20} height={20} />
                                 <div>
                                     <h3 className={"font-bold text-lg"}>Lunch</h3>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>Mon-Fri: 11:30am – 2:30pm</p>
@@ -78,6 +79,7 @@ export default function ReservationsForm() {
                                 </div>
                             </div>
                             <div className={"flex flex-row gap-4 items-start"}>
+                                <Image src={"/svgs/moon-muted.svg"} alt={"Moon icon"} width={20} height={20} />
                                 <div>
                                     <h3 className={"font-bold text-lg"}>Dinner</h3>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>Mon-Thu: 5:00pm – 10:00pm</p>
@@ -88,6 +90,7 @@ export default function ReservationsForm() {
                             <div className={"h-px my-4 w-full bg-border"} />
                             <h2 className={"font-bold text-lg mb-5"}>Location</h2>
                             <div className={"flex flex-row gap-4 mb-6 items-start"}>
+                                <Image src={"/svgs/location-muted.svg"} alt={"Location icon"} width={20} height={20} />
                                 <div>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>123 Culinary Avenue</p>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>Food District, NY 10012</p>
@@ -95,6 +98,7 @@ export default function ReservationsForm() {
                                 </div>
                             </div>
                             <div className={"flex flex-row gap-4 items-start"}>
+                                <Image src={"/svgs/phone-muted.svg"} alt={"Phone icon"} width={20} height={20} />
                                 <div>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>Call us:</p>
                                     <p className={"text-sm text-[#1F2937] font-semibold"}>(212) 555-0199</p>

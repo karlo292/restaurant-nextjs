@@ -3,6 +3,7 @@ import {FaMapMarkerAlt} from "react-icons/fa";
 import {FaPhone, FaRegClock} from "react-icons/fa6";
 import {IoMdMail} from "react-icons/io";
 import type {IconType} from "react-icons";
+import {Image} from "next/dist/client/image-component";
 
 export default function BookingForm() {
     return (
@@ -51,10 +52,10 @@ export default function BookingForm() {
                 <div>
                     <h2 className={"text-black font-inter text-4xl md:text-5xl mb-5 font-semibold text-start"}>Get in Touch</h2>
                     <div className={"flex flex-col justify-start gap-2"}>
-                        <ContactDetail icon={FaMapMarkerAlt} title={"Address"} detail={"123 Culinary St, Foodie City, FC 12345"} />
-                        <ContactDetail icon={FaPhone} title={"Phone"} detail={"+1 (555) 123-4567"} />
-                        <ContactDetail icon={IoMdMail} title={"Email"} detail={"example@savoria.com"} />
-                        <ContactDetail icon={FaRegClock} title={"Working Hours"} detail={"Mon-Sun: 12:00 PM - 10:00 PM"} />
+                        <ContactDetail icon={"/svgs/location-primary.svg"} width={24} height={24} title={"Location"} detail={"123 Culinary St, Foodie City, FC 12345"} />
+                        <ContactDetail icon={"/svgs/phone-primary.svg"} width={24} height={24} title={"Phone"} detail={"+1 (555) 123-4567"} />
+                        <ContactDetail icon={"/svgs/mail-primary.svg"} width={24} height={24} title={"Email"} detail={"example@savoria.com"} />
+                        <ContactDetail icon={"/svgs/clock-primary.svg"} width={24} height={24} title={"Working Hours"} detail={"Mon-Sun: 12:00 PM - 10:00 PM"} />
                     </div>
                 </div>
             </div>
@@ -64,10 +65,10 @@ export default function BookingForm() {
 
 
 
-function ContactDetail({ icon: Icon, title, detail }: { icon: IconType; title: string; detail: string; }) {
+function ContactDetail({ icon, title, detail, width, height }: { icon: string; title: string; detail: string; width: number; height: number; }) {
     return (
         <div className={"flex flex-row gap-3"}>
-            <Icon className={"w-5 h-5 mt-1 text-primary"} />
+            <Image className={"w-5 h-5 mt-1 text-primary"} src={icon} width={width} height={height} alt={title} />
             <div className={"max-w-57.5"}>
                 <h3 className={"font-bold"}>{title}</h3>
                 <p className={"text-sm text-muted-foreground"}>{detail}</p>
