@@ -63,6 +63,7 @@ export default function BookingForm() {
 }
 
 
+
 function ContactDetail({ icon: Icon, title, detail }: { icon: IconType; title: string; detail: string; }) {
     return (
         <div className={"flex flex-row gap-3"}>
